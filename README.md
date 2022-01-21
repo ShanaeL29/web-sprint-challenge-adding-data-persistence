@@ -10,8 +10,8 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
-- [ ] Run `npm install` to install your dependencies.
-- [ ] Run tests locally executing `npm test`.
+- [x] Run `npm install` to install your dependencies.
+- [x] Run tests locally executing `npm test`.
 
 ## Project Instructions
 
@@ -69,20 +69,25 @@ Build the migration(s) in Knex inside the `data/migrations` folder using appropr
 Build an API inside the `api` folder with endpoints for:
 
 - [ ] `[POST] /api/resources`
+
   - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
 - [ ] `[GET] /api/resources`
+
   - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
 - [ ] `[POST] /api/projects`
+
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
 
 - [ ] `[GET] /api/projects`
+
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
 
 - [ ] `[POST] /api/tasks`
+
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_id:1}`
 
@@ -111,6 +116,17 @@ Build an API inside the `api` folder with endpoints for:
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain the difference between Relational Databases and SQL.
+
+- Relational databases are also called SQL databases. SQL stands for Structured Query Language and it’s the language relational databases are written in. SQL is used to execute queries, retrieve data, and edit data by updating, deleting, or creating new records.
+
 2. Why do tables need a Primary Key?
+
+- The primary key ensures row-level accessibility. The primary key also never gets repeated it remains unique forever.
+
 3. What is the name given to a table column that references the Primary Key on another table?
+
+- This table column is called a foreign key.
+
 4. What do we need in order to have a _many to many_ relationship between two tables?
+
+- We need to establish an intermediary table to normalize. The relationship then becomes a one to many relationship with the new table.
